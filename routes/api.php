@@ -2,6 +2,7 @@
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\User\LoginController;
 
 /*
 |--------------------------------------------------------------------------
@@ -23,3 +24,6 @@ Route::post('/tokens/create', function (Request $request) {
  
     return ['token' => $token->plainTextToken];
 });
+
+Route::post('/login', [LoginController::class, 'index']);
+Route::get('/logout', [LoginController::class, 'logout']);
