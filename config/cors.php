@@ -17,8 +17,8 @@ return [
 
     'paths' => [
         'api/*', 
-        '/login',
-        '/logout', 
+        'login',
+        'logout', 
         'sanctum/csrf-cookie'
     ],
 
@@ -26,7 +26,7 @@ return [
 
     'allowed_origins' => ['*'],
 
-    'allowed_origins_patterns' => [],
+    'allowed_origins_patterns' => ['*'],
 
     'allowed_headers' => ['*'],
 
